@@ -23,7 +23,7 @@ github_url:  https://github.com/yangbaojin1988
 
 gems: [jekyll-paginate]
 
-paginate: 2
+paginate: 10
 paginate_path: "page:num"
 
 # Build settings
