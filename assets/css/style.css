@@ -1,0 +1,30 @@
+.site-header {
+	height: 200px;
+	background:#4183c4; 
+	color:#fff;
+	border-top:0px;
+}
+
+.site-title{color: #fff;}
+.navbar {margin-bottom:0px;}
+
+
+.blog-footer {
+	margin-top:15px;
+	padding: 40px 0;
+    color: #999;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-top: 1px solid #e5e5e5;
+}
+
+/* Icons */
+.icon > svg {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+.icon > svg path {
+  fill: #828282;
+}

@@ -1,15 +1,36 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: 关于
+menu: About
 ---
+{% assign current_year = site.time | date: '%Y' %}
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+SunnyDay
+===
+男 80后
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
+## 概况
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+- 邮箱：yangbaojin2015#gmail.com
+- 主页：[https://github.com/yangbaojin1988](https://github.com/yangbaojin1988)
+
+计算机专业毕业，{{ current_year | minus: 2013 }} 年在职工作经验，{{ current_year | minus: 2013 }} 年 web 开发经验。
+
+
+## keywords
+<div class="btn-inline">
+{% for keyword in site.skill_keywords %} <button class="btn btn-outline" type="button">{{ keyword }}</button> {% endfor %}
+</div>
+
+### 综合技能
+
+| 名称 | 熟悉程度
+|--:|:--|
+| PHP | ★★★★★ |
+| javascript | ★★★★☆ |
+| Linux | ★★★★☆ |
+| Swift | ★★★☆☆ |
+| Nodejs | ★★★★☆ |
+| Markdown | ★★★★★ |
+| C | ★★☆☆☆ |
+| Photoshop | ★★★★☆ |
