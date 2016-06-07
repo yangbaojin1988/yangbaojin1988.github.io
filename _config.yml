@@ -19,6 +19,7 @@ baseurl: ""
 url: "http://yangbaojin1988.github.io" 
 
 github_username:  yangbaojin1988
+github_url:  https://github.com/yangbaojin1988
 
 # Build settings
 markdown: kramdown

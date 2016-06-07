@@ -2,21 +2,32 @@
 <html>
 
   {% include head.html %}
-
   <body>
-
     {% include header.html %}
     <div class="site-header">
-      
+      <div class="container">
+        <div class="row">
+          <h2>Code Artisan</h2>
+        </div>  
+        <div class="row">
+          <ul class="list-inline">
+            <li><i class="fa fa-location-arrow" aria-hidden="true"></i> China Beijing</li>
+            <li><i class="fa fa-code" aria-hidden="true"></i> <span data-toggle="tooltip" data-placement="bottom" title="PHP, JavaScript, HTML+CSS"> Web development</span></li>
+            <li><a href="{{ site.github_url }}" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> {{ site.github_username }}</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
+    <script type="text/javascript">
+      $(function() {
+        $('[data-toggle="tooltip"]').tooltip();
+      })
+    </script>
     <div class="page-content container">
       <div class="wrapper">
         {{ content }}
       </div>
     </div>
-
     {% include footer.html %}
-
   </body>
-
 </html>

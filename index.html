@@ -6,7 +6,7 @@ layout: default
     {% for post in site.posts %}
       <li>
         <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-        <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
+        <span class="post-meta"><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date: "%Y/%m/%d" }}</span>
       </li>
     {% endfor %}
   </ul>

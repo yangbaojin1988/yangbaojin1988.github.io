@@ -22,15 +22,5 @@ SunnyDay
 {% for keyword in site.skill_keywords %} <button class="btn btn-outline" type="button">{{ keyword }}</button> {% endfor %}
 </div>
 
-### 综合技能
-
-| 名称 | 熟悉程度
-|--:|:--|
-| PHP | ★★★★★ |
-| javascript | ★★★★☆ |
-| Linux | ★★★★☆ |
-| Swift | ★★★☆☆ |
-| Nodejs | ★★★★☆ |
-| Markdown | ★★★★★ |
-| C | ★★☆☆☆ |
-| Photoshop | ★★★★☆ |
+### 简言
+无论你觉得自己多么的不幸，永远有人比你更加不幸；无论你觉得多么的了不起，也永远有人比你更强…
