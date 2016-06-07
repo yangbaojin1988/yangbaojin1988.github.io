@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery qrcode </title>
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://github.com/jeromeetienne/jquery-qrcode/blob/master/jquery.qrcode.min.js"></script>
+	<style>
+        .row {padding-top: 10px;}
+        .col-md-3 {padding-right: 0px;}
+        .code canvas {width: 150px; height: 150px;}
+	</style>
+	<script>
+		$(function() {
+            // console.log(window.location.href);
+            // 默认二维码
+			$('.code').qrcode(toUtf8('demo.laobao001.com'));
+			
+			$('button').click(function() {
+                // 获取表单值去除左右空格
+                var code = $.trim($('input[name="code"]').val());
+                // 表单为空
+                if (code === '' || code === null) {
+                    // 添加样式
+                    $('.col-md-3').addClass('has-error');
+                    // 焦点回到输入框
+                    $('input[name="code"]').focus();
+                    return false;
+                }
+                $('.col-md-3').removeClass('has-error');
+                // 把输入框值清空
+                $('input[name="code"]').val('');
+                // 把默认的二维码清空
+                $('.code').empty().qrcode({
+                    width : 150,
+                    height: 150,
+                    text  : toUtf8(code)
+                });
+                $('.code canvas').animate({marginLeft:'55px'}).animate({marginTop:'50px'});
+			});
+		});
+		
+		// 识别中文(转换中文字符串)
+		function toUtf8(str) {    
+            var out, i, len, c;    
+            out = '';    
+            len = str.length;    
+            for (i = 0; i < len; i++) {    
+                c = str.charCodeAt(i);    
+                if ((c >= 0x0001) && (c <= 0x007F)) {    
+                    out += str.charAt(i);    
+                } else if (c > 0x07FF) {    
+                    out += String.fromCharCode(0xE0 | ((c >> 12) & 0x0F));    
+                    out += String.fromCharCode(0x80 | ((c >>  6) & 0x3F));    
+                    out += String.fromCharCode(0x80 | ((c >>  0) & 0x3F));    
+                } else {    
+                    out += String.fromCharCode(0xC0 | ((c >>  6) & 0x1F));    
+                    out += String.fromCharCode(0x80 | ((c >>  0) & 0x3F));    
+                }    
+            }    
+            return out;    
+        } 
+	</script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <input type="text" name="code" class="form-control" />
+            </div>
+            <div class="col-md-1">
+                <button type="button" class="btn btn-primary">确定</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="code"></div>
+            </div>
+        </div>
+    </div> 
+</body>
+</html>
