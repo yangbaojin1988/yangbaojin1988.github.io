@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  "改进的前序遍历树算法实现无限极分类"
-date:   2016-06-07 13:01:35 +0800
+date:   2016-06-07
 categories: sunnyday update
+author: SunnyDay
 ---
 大家通常都是使用[递归实现无限极分类](http://www.phpddt.com/php/generateTree.html){:target="_blank"}，都知道递归效率很低，下面介绍一种改进的前序遍历树算法，不适用递归实现无限极分类，在大数据量实现树状层级结构的时候效率更高：
 
