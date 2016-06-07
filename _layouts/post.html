@@ -1,15 +1,25 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-
+<article class="post">
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+    <p class="post-meta">
+    	<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%Y/%m/%d" }}</time>
+    	{% if page.author %} • 
+    		<span itemprop="author">
+    			<span itemprop="name">{{ page.author }}</span>
+    		</span>
+    	{% endif %}
+    </p>
   </header>
-
   <div class="post-content" itemprop="articleBody">
     {{ content }}
   </div>
-
 </article>
+<hr>
+<!-- 分享start -->
+<div class="social-share" data-title="{{ page.title }}" data-sites="weibo,qzone,tencent,wechat,qq,douban">
+    <a href="javascript:;" class="social-share-icon icon-heart"></a>
+</div>
+<!-- 分享end-->
