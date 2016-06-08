@@ -22,14 +22,14 @@ layout: default
             {% if !paginator.previous_page %}
               <li><a href="/page{{paginator.previous_page}}">Previous</a></li>
             {% else %}
-              <li><a href="javascript:;">Previous</a></li>
+              <li><a href="javascript:;" onclick="javascript:alert('没了')">Previous</a></li>
             {% endif %}
         {% endif %}
 
         {% if paginator.next_page %}
           <li><a href="/page{{paginator.next_page}}">Next</a></li>
         {% else %}
-          <li><a href="javascript:;">Next</a></li>
+          <li><a href="javascript:;" onclick="javascript:alert('没了')">Next</a></li>
         {% endif %}
       </ul>
     </nav>

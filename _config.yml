@@ -22,7 +22,6 @@ github_username:  yangbaojin1988
 github_url:  https://github.com/yangbaojin1988
 
 gems: [jekyll-paginate]
-
 paginate: 10
 paginate_path: "page:num"
 
